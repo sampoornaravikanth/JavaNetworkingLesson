@@ -14,9 +14,9 @@ public class Example {
 	}
 
 	public void request(String name) throws IOException {
-		InetAddress address = InetAddress.getByName("localhost");
+		InetAddress address = InetAddress.getByName("172.16.4.58");
 		byte[] buffer = name.getBytes();
-		DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 4242);
+		DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 4243);
 		socket.send(packet);
 		// send the name to the server
 	}
